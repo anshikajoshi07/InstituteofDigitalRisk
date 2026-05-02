@@ -7,49 +7,134 @@
 
 
 
-<section class="about">
-  <div class="container">
-    <h1>About Us</h1>
-    <p>Welcome to Online Job Portal, where we connect job seekers with the best opportunities and help companies find top talent.</p>
+<section class="about-hero">
+  <div class="about-inner">
+    <h1>About JobPortal</h1>
+    <p>Connecting talent with opportunity through a fast, reliable, and intelligent job platform.</p>
+  </div>
+</section>
 
-    <h2>Our Mission</h2>
-    <p>Our mission is to simplify the job search process by offering a seamless platform that bridges the gap between employers and job seekers. We strive to create a space where careers flourish and businesses grow with the right talent.</p>
-
-    <h2>Why Choose Us?</h2>
-    <ul>
-      <li><strong>Wide Range of Jobs:</strong> Explore thousands of job listings across various industries.</li>
-      <li><strong>Easy Application Process:</strong> Apply for jobs quickly and track your applications with ease.</li>
-      <li><strong>Trusted by Employers:</strong> We work with leading companies to bring you top job opportunities.</li>
-      <li><strong>Career Resources:</strong> Get expert tips, resume guidance, and interview preparation support.</li>
-    </ul>
-
-    <h2>Join Us Today</h2>
-    <p>Whether you're looking for your dream job or searching for the perfect candidate, [Your Job Portal Name] is here to help. Join us today and take the next step in your career journey.</p>
+<section class="about-content">
+  <div class="cards">
+    <div class="card">
+      <h2>Our Mission</h2>
+      <p>To simplify hiring and job search by putting people first. We help candidates shine and companies hire smarter with tools and support designed for real-world success.</p>
+    </div>
+    <div class="card">
+      <h2>Our Vision</h2>
+      <p>To become India’s most trusted job marketplace, where every profile is seen and every opportunity is real. We envision strong careers and empowered teams across industries.</p>
+    </div>
+    <div class="card">
+      <h2>Our Values</h2>
+      <p>Transparency, speed, trust, and growth. We ensure verified jobs, honest communication, and matched skills so both candidates and recruiters win.</p>
+    </div>
   </div>
 
+  <div class="why-us">
+    <h2>Why Choose JobPortal</h2>
+    <ul>
+      <li>Verified job listings from trusted companies</li>
+      <li>Skill-based matches and tailored alerts</li>
+      <li>Resume builder and interview readiness resources</li>
+      <li>24x7 support with career coaching and advice</li>
+    </ul>
+    <a class="btn btn-primary" href="{% url 'index' %}">Explore Jobs Now</a>
+  </div>
 </section>
 
 <style>
-  .about {
-    padding: 50px 20px;
+  .about-hero {
+    background: linear-gradient(135deg, #0a527e, #0d9488);
+    color: white;
     text-align: center;
-    background-color: #f9f9f9;
-    font-size: x-large;
+    padding: 60px 20px;
   }
-  .container {
-    max-width: 800px;
-    margin: auto;
+  .about-hero h1 {
+    margin: 0;
+    font-size: 2.7rem;
+    font-weight: 800;
   }
-  h1, h2 {
-    color: #333;
+  .about-hero p {
+    margin: 12px auto 0;
+    max-width: 620px;
+    line-height: 1.5;
+    font-size: 1.1rem;
   }
-  p, ul {
-    color: #555;
+  .about-content {
+    padding: 40px 20px 60px;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  }
+  .card h2 {
+    font-size: 1.25rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+  .card p {
+    color: #475569;
     line-height: 1.6;
   }
-  ul {
+  .why-us {
+    text-align: center;
+    padding: 0 12px;
+  }
+  .why-us h2 {
+    color: #0f766e;
+    font-size: 1.9rem;
+    margin-bottom: 12px;
+  }
+  .why-us ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 18px;
+    max-width: 640px;
+    color: #334155;
     text-align: left;
-    display: inline-block;
+  }
+  .why-us ul li {
+    margin: 8px 0;
+    position: relative;
+    padding-left: 28px;
+  }
+  .why-us ul li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #10b981;
+    font-weight: 700;
+  }
+  .why-us .btn {
+    font-weight: 700;
+    padding: 10px 26px;
+    border-radius: 999px;
+    background: #0f766e;
+    border-color: #0f766e;
+  }
+  .why-us .btn:hover {
+    background: #0f172a;
+    border-color: #0f172a;
+  }
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2.2rem;
+    }
+    .about-content {
+      padding: 28px 14px 50px;
+    }
   }
 </style>
 

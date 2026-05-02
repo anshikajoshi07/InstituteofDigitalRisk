@@ -31,15 +31,17 @@
         color: white !important;
     }
 
-    .navbar-logo img {
-        width: 100%;
-        max-width: 220px;
-        height: auto;
+    .navbar-text-logo {
+        font-weight: 800;
+        font-size: 1.6rem;
+        color: #25a88b;
+        letter-spacing: 0.04em;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
     }
 
     .content-below {
-        margin-top: 40px;
-    }
+        margin-top: 20px;
+    
 
     @media (max-width: 992px) {
         .navbar {
@@ -89,8 +91,8 @@
 <body>
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-      <div class="d-flex">
-      <img src="{% static 'images/logo3.jpg' %}" alt="logo" height="100px" width="250px">
+      <div class="d-flex navbar-text-logo">
+        <span>JobPortal</span>
       </div>
       <a class="navbar-brand"></a>
       <form class="d-flex" role="search">
