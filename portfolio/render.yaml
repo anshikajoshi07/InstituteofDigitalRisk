@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: portfolio
+    env: python
+    region: oregon
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt && cd portfolio_project && python manage.py collectstatic --noinput
+    startCommand: cd portfolio_project && gunicorn portfolio_project.wsgi:application --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: 1
+      - key: DJANGO_SETTINGS_MODULE
+        value: portfolio_project.settings
+      - key: DJANGO_DEBUG
+        value: False
